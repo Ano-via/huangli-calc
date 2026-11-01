@@ -1,7 +1,7 @@
 name: Generate Lunar ICS
 
 on:
-  scheduled:
+  schedule:
     # 每月 1 号的 0:0次运行一次 (UTC时间)
     - cron: '0 0 1 * *'
   workflow_dispatch: # 支持手动触发
