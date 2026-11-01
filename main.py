@@ -17,7 +17,7 @@ import os
 import uuid
 from datetime import date, timedelta, datetime, timezone
 from pathlib import Path
-
+from zoneinfo import ZoneInfo
 from lunar_python import Lunar, Solar
 
 
@@ -190,7 +190,9 @@ def generate_calendar(event_type, start_date, end_date):
 
 def main():
 
-    current_year = date.today().year
+    current_year = datetime.now(
+        ZoneInfo("Asia/Shanghai")
+    ).year
 
     start_year = current_year - 1
     end_year = current_year + 1
