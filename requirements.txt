@@ -1,1 +1,2 @@
-lunar_python
+lunar-python>=1.3.0
+icalendar>=5.0.0
